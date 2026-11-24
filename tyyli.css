@@ -1,0 +1,65 @@
+/* Ketun penkki. Ei ulkoisia fontteja, skriptejä eikä seurantaa: kävijästä ei jää jälkeä. */
+:root {
+  --yo: #0a1222;
+  --yo-2: #0e1a33;
+  --kuu: #f1ead2;
+  --teksti: #e6e1d3;
+  --himmea: #a9b0c0;
+  --linkki: #f3d9a4;
+}
+* { box-sizing: border-box; }
+html { background: var(--yo); }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--teksti);
+  background:
+    radial-gradient(ellipse 60% 38% at 50% 0%, rgba(241, 234, 210, 0.10), rgba(241, 234, 210, 0) 70%),
+    linear-gradient(180deg, var(--yo-2) 0%, var(--yo) 70%);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.penkki {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 3.5rem 1rem 4rem;
+}
+.kieli {
+  text-align: right;
+  font-size: 0.95rem;
+  margin: 0 0 3rem;
+}
+a { color: var(--linkki); text-underline-offset: 0.2em; }
+a:focus-visible { outline: 2px solid var(--kuu); outline-offset: 3px; }
+h1 {
+  font-weight: normal;
+  font-size: clamp(1.7rem, 6vw, 2.3rem);
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  color: var(--kuu);
+  margin: 0 0 2.2rem;
+}
+p { margin: 0 0 1.4rem; }
+figure { margin: 3rem 0 2.5rem; }
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(241, 234, 210, 0.08);
+}
+figcaption {
+  margin-top: 0.8rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--himmea);
+}
+footer {
+  margin-top: 3.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(241, 234, 210, 0.12);
+  font-size: 0.9rem;
+  color: var(--himmea);
+}
